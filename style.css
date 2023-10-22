@@ -29,11 +29,18 @@
     }
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     text-align: center;
+    max-width: 490px;
+    height: 700px;
     margin: 0;
     padding: 0;
 }
@@ -41,13 +48,13 @@ body {
 
 .quiz-container {
     background-image: url("img/game_title.png");
-    background-size:cover;
+    background-size:100% auto;
+    background-repeat: no-repeat;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin: 20px;
     border: solid 1px;
-    width: 500px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,7 +70,7 @@ body {
 #question{
     background-color: transparent;
     font-family: 'Pixelify Sans', Arial, sans-serif;
-    font-size:x-large ;
+    font-size: x-large ;
     font-weight: bold;
     color: #2E1B5B;
     padding: 0px 0px 0px 0px;
@@ -122,6 +129,7 @@ body {
     position: absolute;
     top: 93%; /* 定位到容器的垂直下方 */
     left: 65%; /* 定位到容器的水平中間偏右 */
+    display: none;
 }
 
 #start{
@@ -157,6 +165,7 @@ body {
     font-weight: bold;
     position: absolute;
     top: 45%;
+
 }
 
 #thank {
@@ -173,12 +182,12 @@ body {
     font-family: 'Pixelify Sans', Arial, sans-serif;
     font-weight: bold;
     top: 10%;
-
+    display: none;
 }
 
 #ending {
-    width: 70%;
-    height: 10% ;
+    width: 72%;
+    height: 30% ;
 
     padding: 5px 15px 5px 15px;
     margin: 5px;
@@ -194,7 +203,123 @@ body {
     left: 10%; /* 定位到容器的水平中間偏左 */
     z-index: 1;
     white-space: pre-line;
+    display: none;
 }
 
 
+@media (max-width: 401px) {
+    .quiz-container {
+        height: 78vh; 
+    }
+    #question {
+        font-size:large ;
+        width: 81.63%;
+        height: 32.65% ;/* 適應小螢幕的題目樣式 */
+    }
+    .option {
+        font-size: medium ;
+        padding: 7px 11px 7px 11px;
+        margin: 9px;
+    }
+    #start{
+        font-size:49px ;  
+    }
+    #start_2{
+        font-size:24px ;  
+    }
+    .top{
+        margin: 60px 0px 15px 0px;
+    }
+    #ending{
+        /*padding: 5px 15px 5px 15px;
+        margin: 5px;*/
+    
+        font-size: medium ; 
+    }
+    #thank{
+        font-size: 49px ;
+    }
+    #result{
+        font-size: 10px ;
+        left: 65%;
+    }
+    /* 這些樣式只會在螢幕寬度小於401px時應用 */
+}
 
+@media (max-width: 360px) {
+    .quiz-container {
+        height: 70vh; 
+    }
+    #question {
+        font-size:large ;
+        width: 73.47%;
+        height: 29.39% ;/* 適應小螢幕的題目樣式 */
+    }
+    .option {
+        font-size: smaller ;
+        padding: 7px 11px 7px 11px;
+        margin: 8px;
+    }
+    #start{
+        font-size:44px ;  
+    }
+    #start_2{
+        font-size:22px ;  
+    }
+    .top{
+        margin: 45px 0px 20px 0px;
+    }
+    #ending{
+        /*padding: 5px 15px 5px 15px;
+        margin: 5px;*/
+    
+        font-size: medium ; 
+    }
+    #thank{
+        font-size: 44px ;
+    }
+    #result{
+        font-size: 8px ;
+        left: 60%;
+    }
+    /* 這些樣式只會在螢幕寬度小於360px時應用 */
+}
+
+@media (max-width: 321px) {
+    .quiz-container {
+        height: 61vh; 
+    }
+    #question {
+        font-size:95% ;
+        width: 73.47%;
+        height: 29.39% ;/* 適應小螢幕的題目樣式 */
+    }
+    .option {
+        font-size: 85% ;
+        padding: 7px 11px 7px 11px;
+        margin: 5px;
+    }
+    #start{
+        font-size:40px ;  
+    }
+    #start_2{
+        font-size:20px ;  
+    }
+    .top{
+        margin: 45px 0px 13px 0px;
+    }
+    #ending{
+        padding: 1px 15px 5px 15px;
+        margin: 0px;
+    
+        font-size: smaller ; 
+    }
+    #thank{
+        font-size: 40px ;
+    }
+    #result{
+        font-size: 8px ;
+        left: 55%;
+    }
+    /* 這些樣式只會在螢幕寬度小於321px時應用 */
+}
