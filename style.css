@@ -40,7 +40,7 @@ body {
     background-color: #f0f0f0;
     text-align: center;
     max-width: 490px;
-    height: 700px;
+    height: 695px;
     margin: 0;
     padding: 0;
 }
@@ -48,13 +48,14 @@ body {
 
 .quiz-container {
     background-image: url("img/game_title.png");
-    background-size:100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: solid 1px;
-    width: 100%;
-    height: 100%;
+    width: 490px;
+    aspect-ratio: 490 / 695 ;
+    margin: 2px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +66,7 @@ body {
 .top{
     width: 80%;
     height: 19%;
-    margin: 80px 0px 10px 0px;
+    margin: 75px 0px 15px 0px;
 }
 #question{
     background-color: transparent;
@@ -120,10 +121,10 @@ body {
 
     font-weight: bold;
     color: rgb(43, 0, 184);
-    text-shadow: -1px -1px 0 #efe4d1,
-    1px -1px 0 #efe4d1,
-    -1px 1px 0 #efe4d1,
-    1px 1px 0 #efe4d1;
+    text-shadow: -1px -1px 3px #efe4d1,
+    1px -1px 3px #efe4d1,
+    -1px 1px 3px #efe4d1,
+    1px 1px 3px #efe4d1;
     
     margin-top: 10px;
     position: absolute;
@@ -206,9 +207,79 @@ body {
     display: none;
 }
 
+@media (max-width: 441px) {
+    .quiz-container {
+        width: 440px; 
+    }
+    #question {
+        font-size: 135% ;
+        width: 90%;
+        height: 36% ;/* 適應小螢幕的題目樣式 */
+    }
+    .option {
+        font-size: 17px ;
+        padding: 8px 12px 8px 12px;
+        margin: 12px;
+    }
+    #start{
+        font-size:55px ;  
+    }
+    #start_2{
+        font-size:28px ;  
+    }
+    .top{
+        margin: 68px 0px 14px 0px;
+    }
+    #ending{
+        font-size: large ; 
+    }
+    #thank{
+        font-size: 55px ;
+    }
+    #result{
+        font-size: 15px ;
+    }
+    /* 這些樣式只會在螢幕寬度小於441px時應用 */
+}
+
+@media (max-width: 421px) {
+    .quiz-container {
+        width: 420px; 
+    }
+    #question {
+        font-size:large ;
+        width: 85.9%;
+        height: 34% ;/* 適應小螢幕的題目樣式 */
+    }
+    .option {
+        font-size: 16px ;
+        padding: 8px 12px 8px 12px;
+        margin: 11px;
+    }
+    #start{
+        font-size:56px ;  
+    }
+    #start_2{
+        font-size:26px ;  
+    }
+    .top{
+        margin: 70px 0px 9px 0px;
+    }
+    #ending{
+        font-size: medium ; 
+    }
+    #thank{
+        font-size: 50px ;
+    }
+    #result{
+        font-size: 13px ;
+    }
+    /* 這些樣式只會在螢幕寬度小於421px時應用 */
+}
+
 @media (max-width: 401px) {
     .quiz-container {
-        height: 78vh; 
+        width: 400px; 
     }
     #question {
         font-size:large ;
@@ -216,9 +287,9 @@ body {
         height: 32.65% ;/* 適應小螢幕的題目樣式 */
     }
     .option {
-        font-size: medium ;
+        font-size: 15px ;
         padding: 7px 11px 7px 11px;
-        margin: 9px;
+        margin: 12px;
     }
     #start{
         font-size:49px ;  
@@ -227,27 +298,23 @@ body {
         font-size:24px ;  
     }
     .top{
-        margin: 60px 0px 15px 0px;
+        margin: 68px 0px 4px 0px;
     }
     #ending{
-        /*padding: 5px 15px 5px 15px;
-        margin: 5px;*/
-    
         font-size: medium ; 
     }
     #thank{
-        font-size: 49px ;
+        font-size: 47px ;
     }
     #result{
-        font-size: 10px ;
-        left: 65%;
+        font-size: 11px ;
     }
     /* 這些樣式只會在螢幕寬度小於401px時應用 */
 }
 
-@media (max-width: 360px) {
+@media (max-width: 361px) {
     .quiz-container {
-        height: 70vh; 
+        width: 360px;  
     }
     #question {
         font-size:large ;
@@ -255,9 +322,9 @@ body {
         height: 29.39% ;/* 適應小螢幕的題目樣式 */
     }
     .option {
-        font-size: smaller ;
-        padding: 7px 11px 7px 11px;
-        margin: 8px;
+        font-size: 15px ;
+        padding: 6px 10px 6px 10px;
+        margin: 10px;
     }
     #start{
         font-size:44px ;  
@@ -266,37 +333,73 @@ body {
         font-size:22px ;  
     }
     .top{
-        margin: 45px 0px 20px 0px;
+        margin: 52px 0px 12px 0px;
     }
     #ending{
-        /*padding: 5px 15px 5px 15px;
-        margin: 5px;*/
-    
-        font-size: medium ; 
+        padding: 3px 10px 5px 10px;
+        font-size: 95% ; 
     }
     #thank{
         font-size: 44px ;
     }
     #result{
-        font-size: 8px ;
-        left: 60%;
+        font-size: 9px ;
     }
-    /* 這些樣式只會在螢幕寬度小於360px時應用 */
+    /* 這些樣式只會在螢幕寬度小於361px時應用 */
+}
+
+@media (max-width: 341px) {
+    .quiz-container {
+        width: 340px; 
+    }
+    #question {
+        font-size: 100% ;
+        width: 69.38%;
+        height: 27.76% ;/* 適應小螢幕的題目樣式 */
+    }
+    .option {
+        font-size: 13px ;
+        padding: 6px 10px 6px 10px;
+        margin: 10px;
+    }
+    #start{
+        font-size:41.5px ;  
+    }
+    #start_2{
+        font-size:20px ;  
+    }
+    .top{
+        margin: 55px 0px 6px 0px;
+    }
+    #ending{
+        padding: 1px 10px 5px 10px;
+        margin: 0px;
+    
+        font-size: 90% ; 
+    }
+    #thank{
+        font-size: 41.5px ;
+    }
+    #result{
+        font-size: 9px ;
+        left: 63%;
+    }
+    /* 這些樣式只會在螢幕寬度小於341px時應用 */
 }
 
 @media (max-width: 321px) {
     .quiz-container {
-        height: 61vh; 
+        width: 320px;  
     }
     #question {
         font-size:95% ;
-        width: 73.47%;
-        height: 29.39% ;/* 適應小螢幕的題目樣式 */
+        width: 65.5%;
+        height: 25.39% ;/* 適應小螢幕的題目樣式 */
     }
     .option {
-        font-size: 85% ;
-        padding: 7px 11px 7px 11px;
-        margin: 5px;
+        font-size: 12px ;
+        padding: 5px 9px 5px 9px;
+        margin: 10px;
     }
     #start{
         font-size:40px ;  
@@ -305,7 +408,7 @@ body {
         font-size:20px ;  
     }
     .top{
-        margin: 45px 0px 13px 0px;
+        margin: 52px 0px 4px 0px;
     }
     #ending{
         padding: 1px 15px 5px 15px;
@@ -314,11 +417,11 @@ body {
         font-size: smaller ; 
     }
     #thank{
-        font-size: 40px ;
+        font-size: 38px ;
     }
     #result{
-        font-size: 8px ;
-        left: 55%;
+        font-size: 7px ;
+        left: 61%;
     }
     /* 這些樣式只會在螢幕寬度小於321px時應用 */
 }
